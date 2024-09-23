@@ -1,0 +1,13 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon {
+  color: white;
+}
+
+.header {
+  background-color: #56097f;
+  color: white;
+  align-items: center;
+}

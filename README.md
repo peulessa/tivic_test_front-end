@@ -1,27 +1,34 @@
-# TivicTestFrontEnd
+# Tivic Test Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Este é o front-end do projeto Tivic Test.
 
-## Development server
+Instruções de Configuração e Execução do Projeto:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pré-requisitos:
 
-## Code scaffolding
+  - Node.js (Versão mínima recomendada: 16.x)
+  - Angular CLI (Versão mínima recomendada: 15.x)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Passos para rodar o projeto:
 
-## Build
+1. Instalar as dependências:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+        npm install
 
-## Running unit tests
+2. Configurar o end-point da API e autenticação no api.service:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No arquivo api.service.ts, configure o URL da API, o usuário e o token para autenticação com Spring Security:
 
-## Running end-to-end tests
+        private apiUrl = 'api-endpoint'; // URL da API
+        private username = 'your-user'; // Usuário para autenticação
+        private password = 'your-token'; // Token de autenticação
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Rodar a aplicação:
 
-## Further help
+        ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Acesse a aplicação no navegador em http://localhost:4200.
+
+## Tecnologias Utilizadas
+
+![Angular](https://img.shields.io/badge/Angular-18.0.0-DD0031?style=for-the-badge&logo=angular&logoColor=white) ![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?style=for-the-badge&logo=leaflet&logoColor=white) ![Angular Material](https://img.shields.io/badge/Angular%20Material-15.0.0-757575?style=for-the-badge&logo=angular-material&logoColor=white) ![NgCharts2](https://img.shields.io/badge/NgCharts2-1.0.0-ff5733?style=for-the-badge&logo=chart.js&logoColor=white)

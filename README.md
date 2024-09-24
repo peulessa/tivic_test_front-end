@@ -25,7 +25,7 @@ Instruções de Configuração e Execução do Projeto:
 
         ng serve
 
-Acesse a aplicação no navegador em http://localhost:4200.
+  Acesse a aplicação no navegador em http://localhost:4200.
 
 ## Tecnologias Utilizadas
 

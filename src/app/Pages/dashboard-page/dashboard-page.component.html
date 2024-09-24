@@ -22,6 +22,50 @@
   </mat-toolbar>
 </section>
 
-<section>
-  <app-table></app-table>
+<section style="display: flex; justify-content: space-between">
+  <div class="card cyan">
+    <p>ACIDENTES</p>
+    <p>1250</p>
+  </div>
+
+  <div class="card green">
+    <p>MORTES</p>
+    <p>1250</p>
+  </div>
+
+  <div class="card yellow">
+    <p>FERIDOS LEVES</p>
+    <p>1250</p>
+  </div>
+
+  <div class="card orange">
+    <p>FERIDOS GRAVES</p>
+    <p>1250</p>
+  </div>
+</section>
+
+<section style="display: flex; width: 100%">
+  <div class="barChat">
+    <canvas
+      baseChart
+      [data]="barChartData"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [type]="'bar'"
+    >
+    </canvas>
+  </div>
+
+  <div class="pieChart">
+    <canvas
+      baseChart
+      [type]="'pie'"
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend"
+    ></canvas>
+  </div>
 </section>

@@ -4,17 +4,19 @@
       <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon">
         <mat-icon>menu</mat-icon>
       </button>
+
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>add_circle</mat-icon>
-          <span>Cadastro</span>
+        <button mat-menu-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span>DashBoard</span>
         </button>
 
-        <button mat-menu-item>
-          <mat-icon>visibility</mat-icon>
-          <span>Visualização</span>
+        <button mat-menu-item routerLink="/map">
+          <mat-icon>map</mat-icon>
+          <span>Visualização em Mapa</span>
         </button>
       </mat-menu>
+
       <span>DashBoard</span>
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon" aria-label="Logout">

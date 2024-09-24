@@ -1,0 +1,27 @@
+<section class="body">
+  <section class="header">
+    <mat-toolbar style="background-color: #3b3d4b; color: white">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span>DashBoard</span>
+        </button>
+
+        <button mat-menu-item routerLink="/map">
+          <mat-icon>map</mat-icon>
+          <span>Visualização em Mapa</span>
+        </button>
+      </mat-menu>
+
+      <span>DashBoard</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Logout">
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar>
+  </section>
+</section>

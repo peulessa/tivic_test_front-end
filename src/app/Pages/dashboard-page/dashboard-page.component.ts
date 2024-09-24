@@ -3,11 +3,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTableModule } from '@angular/material/table';
-import { MatCardModule } from '@angular/material/card';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { ApiService } from '../../services/api.service';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -17,9 +16,10 @@ import { ApiService } from '../../services/api.service';
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
-    MatTableModule,
-    MatCardModule,
     BaseChartDirective,
+    RouterModule,
+    RouterLink,
+    RouterOutlet,
   ],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.css',

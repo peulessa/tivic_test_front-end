@@ -8,7 +8,7 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item routerLink="/dashboard">
           <mat-icon>dashboard</mat-icon>
-          <span>DashBoard</span>
+          <span>Mapa</span>
         </button>
 
         <button mat-menu-item routerLink="/map">
@@ -18,14 +18,14 @@
       </mat-menu>
 
       <span>DashBoard</span>
+
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon" aria-label="Logout">
-        <mat-icon>logout</mat-icon>
-      </button>
+
+      <mat-icon>location_on</mat-icon>
     </mat-toolbar>
   </section>
 
-  <section>
-    <div id="map" style="width: 100%; height: 100vh"></div>
+  <section class="map-section">
+    <div id="map" style="width: 100%; height: 100%"></div>
   </section>
 </section>

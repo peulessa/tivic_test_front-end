@@ -39,7 +39,13 @@ export class ApiService {
   }
 
   getAcidentePorMes(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/acidente-por-mes`, {
+    return this.http.get<any>(`${this.apiUrl}/acidentes-por-mes`, {
+      headers: this.authHeader,
+    });
+  }
+
+  getResumo(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/resumo`, {
       headers: this.authHeader,
     });
   }

@@ -7,36 +7,58 @@
 }
 
 .header {
-  background-color: #56097f;
-  color: white;
-  align-items: center;
-  height: 30px;
+  height: 7vh;
+}
+
+.cards {
+  height: calc(13vh - 6px);
+  display: flex;
+  justify-content: space-between;
+  margin: 6px;
 }
 
 .card {
-  padding: 10px;
-  margin: 7px;
-  height: 70px;
-  width: 100%;
+  height: 100%;
+  width: calc(25% - 10px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
+  margin: 0 5px;
+  color: white;
+  background: radial-gradient(circle, #0e626d, #0e626d96, #0e626d63);
 }
 
-.cyan {
-  background-color: #00bcd4;
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 20px);
+  height: calc(80vh - 20px);
+  gap: 10px;
+  margin: 10px;
 }
 
-.orange {
-  background-color: #ff9800;
+.chartsCapsule {
+  flex: 1 1 calc(50% - 10px);
+  background-color: #3b3d4b;
 }
 
-.green {
-  background-color: #4caf50;
+.barChart {
+  width: 100%;
+  height: 100%;
 }
 
-.yellow {
-  background-color: #ffeb3b;
+.pieChart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e22;
 }

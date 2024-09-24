@@ -1,71 +1,79 @@
-<section>
-  <mat-toolbar class="header">
-    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>add_circle</mat-icon>
-        <span>Cadastro</span>
+<section class="body">
+  <section class="header">
+    <mat-toolbar style="background-color: #3b3d4b; color: white">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon">
+        <mat-icon>menu</mat-icon>
       </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>add_circle</mat-icon>
+          <span>Cadastro</span>
+        </button>
 
-      <button mat-menu-item>
-        <mat-icon>visibility</mat-icon>
-        <span>Visualização</span>
+        <button mat-menu-item>
+          <mat-icon>visibility</mat-icon>
+          <span>Visualização</span>
+        </button>
+      </mat-menu>
+      <span>DashBoard</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Logout">
+        <mat-icon>logout</mat-icon>
       </button>
-    </mat-menu>
-    <span>DashBoard</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon" aria-label="Logout">
-      <mat-icon>logout</mat-icon>
-    </button>
-  </mat-toolbar>
-</section>
+    </mat-toolbar>
+  </section>
 
-<section style="display: flex; justify-content: space-between">
-  <div class="card cyan">
-    <p>ACIDENTES</p>
-    <p>1250</p>
-  </div>
+  <section class="cards">
+    <div class="card cyan">
+      <p>ACIDENTES</p>
+      <p>{{ acidentes }}</p>
+    </div>
 
-  <div class="card green">
-    <p>MORTES</p>
-    <p>1250</p>
-  </div>
+    <div class="card green">
+      <p>MORTES</p>
+      <p>{{ mortos }}</p>
+    </div>
 
-  <div class="card yellow">
-    <p>FERIDOS LEVES</p>
-    <p>1250</p>
-  </div>
+    <div class="card yellow">
+      <p>FERIDOS LEVES</p>
+      <p>{{ feridos_leves }}</p>
+    </div>
 
-  <div class="card orange">
-    <p>FERIDOS GRAVES</p>
-    <p>1250</p>
-  </div>
-</section>
+    <div class="card orange">
+      <p>FERIDOS GRAVES</p>
+      <p>{{ feridos_graves }}</p>
+    </div>
+  </section>
 
-<section style="display: flex; width: 100%">
-  <div class="barChat">
-    <canvas
-      baseChart
-      [data]="barChartData"
-      [options]="barChartOptions"
-      [plugins]="barChartPlugins"
-      [legend]="barChartLegend"
-      [type]="'bar'"
-    >
-    </canvas>
-  </div>
+  <section class="charts">
+    <div class="chartsCapsule">
+      <div class="barChart">
+        <canvas
+          style="width: 100%; height: 100%"
+          baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [legend]="barChartLegend"
+          [type]="'bar'"
+        >
+        </canvas>
+      </div>
+    </div>
 
-  <div class="pieChart">
-    <canvas
-      baseChart
-      [type]="'pie'"
-      [datasets]="pieChartDatasets"
-      [labels]="pieChartLabels"
-      [options]="pieChartOptions"
-      [plugins]="pieChartPlugins"
-      [legend]="pieChartLegend"
-    ></canvas>
-  </div>
+    <div class="chartsCapsule">
+      <div class="pieChart">
+        <canvas
+          style="width: 100%; height: 95%"
+          baseChart
+          [type]="'pie'"
+          [datasets]="pieChartDatasets"
+          [labels]="pieChartLabels"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        ></canvas>
+      </div>
+    </div>
+  </section>
 </section>

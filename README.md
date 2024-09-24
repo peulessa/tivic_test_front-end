@@ -17,11 +17,9 @@ Instruções de Configuração e Execução do Projeto:
 
 2. Configurar o end-point da API e autenticação no api.service:
 
-No arquivo api.service.ts, configure o URL da API, o usuário e o token para autenticação com Spring Security:
-
-            private apiUrl = 'api-endpoint'; // URL da API
-            private username = 'your-user'; // Usuário para autenticação
-            private password = 'your-token'; // Token de autenticação
+        private apiUrl = 'api-endpoint'; // URL da API
+        private username = 'your-user'; // Usuário para autenticação
+        private password = 'your-token'; // Token de autenticação
 
 3. Rodar a aplicação:
 

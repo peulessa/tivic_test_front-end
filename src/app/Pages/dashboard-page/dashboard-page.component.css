@@ -30,6 +30,11 @@
   background: radial-gradient(circle, #0e626d, #0e626d96, #0e626d63);
 }
 
+.card:hover {
+  scale: 1.03;
+  animation: 1s;
+}
+
 .charts {
   display: flex;
   flex-wrap: wrap;

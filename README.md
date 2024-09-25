@@ -6,26 +6,27 @@ Instruções de Configuração e Execução do Projeto:
 
 ## Pré-requisitos:
 
-  - Node.js (Versão mínima recomendada: 16.x)
-  - Angular CLI (Versão mínima recomendada: 15.x)
+- Node.js (Versão mínima recomendada: 16.x)
+- Angular CLI (Versão mínima recomendada: 15.x)
 
 ## Passos para rodar o projeto:
 
-1. Instalar as dependências:
+1.  Instalar as dependências:
 
+        npm install -g @angular/cli
         npm install
 
-2. Configurar o end-point da API e autenticação no api.service:
+2.  Configurar o end-point da API e autenticação no api.service:
 
         private apiUrl = 'api-endpoint'; // URL da API
         private username = 'your-user'; // Usuário para autenticação
         private password = 'your-token'; // Token de autenticação
 
-3. Rodar a aplicação:
+3.  Rodar a aplicação:
 
         ng serve
 
-  Acesse a aplicação no navegador em http://localhost:4200.
+Acesse a aplicação no navegador em http://localhost:4200.
 
 ## Tecnologias Utilizadas
 

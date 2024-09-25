@@ -29,6 +29,9 @@ export class DashboardPageComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
+    this.updateChartOptions();
+    window.addEventListener('resize', this.updateChartOptions.bind(this));
+
     this.apiService.getCausaAcidente().subscribe((data) => {
       this.pieChartLabels = [];
       this.pieChartDatasets[0].data = [];
@@ -71,7 +74,8 @@ export class DashboardPageComponent implements OnInit {
 
   // Pie
   public pieChartOptions: ChartOptions<'pie'> = {
-    responsive: false,
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,
@@ -95,6 +99,7 @@ export class DashboardPageComponent implements OnInit {
       },
     },
   };
+
   public pieChartLabels: string[] = [];
   public pieChartDatasets = [
     {
@@ -202,8 +207,17 @@ export class DashboardPageComponent implements OnInit {
       ],
     },
   ];
+
   public pieChartLegend = true;
   public pieChartPlugins = [];
+
+  public updateChartOptions() {
+    if (window.innerWidth < 768) {
+      this.pieChartLegend = false;
+    } else {
+      this.pieChartLegend = true;
+    }
+  }
 
   //Bar
   public barChartLegend = true;
